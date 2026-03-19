@@ -9,7 +9,7 @@ return array(
 		'title' => 'HHC Blocks',
 		'category' => 'text',
 		'icon' => 'block-default',
-		'description' => 'Custom blocks for Helping Hands Counselling site.',
+		'description' => 'Custom blocks for the Helping Hands Counselling site.',
 		'example' => array(
 			
 		),

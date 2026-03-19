@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       HHC Blocks
- * Description:       Custom blocks for Helping Hands Counselling site.
+ * Description:       Custom blocks for the Helping Hands Counselling site.
  * Version:           0.1.0
  * Requires at least: 6.8
  * Requires PHP:      7.4

@@ -39,7 +39,7 @@
 		},
 		"layout": {
 			"contentSize": "55rem",
-			"wideSize": "62.5px"
+			"wideSize": "62.5rem"
 		},
 		"shadow": {
 			"presets": []
@@ -167,7 +167,53 @@
 					"slug": "cormorant-infant"
 				}
 			],
-			"fontSizes": []
+			"fontSizes": [
+				{
+					"fluid": {
+						"max": "0.75rem",
+						"min": "0.6rem"
+					},
+					"name": "XSmall",
+					"size": "0.7rem",
+					"slug": "custom-1"
+				},
+				{
+					"fluid": {
+						"max": "0.95rem",
+						"min": "0.8rem"
+					},
+					"name": "Small",
+					"size": "0.75rem",
+					"slug": "custom-2"
+				},
+				{
+					"fluid": {
+						"max": "1.15rem",
+						"min": "1rem"
+					},
+					"name": "Mid",
+					"size": "0.85rem",
+					"slug": "custom-3"
+				},
+				{
+					"fluid": {
+						"max": "1.3rem",
+						"min": "1.2rem"
+					},
+					"name": "Large",
+					"size": "0.95rem",
+					"slug": "custom-4"
+				},
+				{
+					"fluid": {
+						"max": "1.45rem",
+						"min": "1.35rem"
+					},
+					"name": "XLarge",
+					"size": "1.2rem",
+					"slug": "custom-5"
+				}
+			]
 		},
 		"useRootPaddingAwareAlignments": true
 	},
@@ -235,15 +281,64 @@
 							}
 						},
 						"color": {
-							"text": "var(--wp--preset--color--custom-main-text)"
+							"text": "var(--wp--preset--color--custom-icons-ct-as)"
 						},
 						"typography": {
 							"fontFamily": "var(--wp--preset--font-family--lato)",
-							"fontSize": "1.1rem",
+							"fontSize": "var(--wp--preset--font-size--custom-3)",
 							"fontStyle": "normal",
-							"fontWeight": "400"
+							"fontWeight": "400",
+							"textTransform": "none"
 						}
 					}
+				}
+			},
+			"core/buttons": {
+				"spacing": {
+					"blockGap": {
+						"left": "var(--wp--preset--spacing--50)"
+					}
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lato)",
+					"fontSize": "var(--wp--preset--font-size--custom-3)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			},
+			"core/categories": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lato)",
+					"fontSize": "var(--wp--preset--font-size--custom-3)",
+					"fontStyle": "normal",
+					"fontWeight": "400"
+				}
+			},
+			"core/pullquote": {
+				"color": {
+					"background": "var(--wp--preset--color--custom-links-secondary-background)",
+					"text": "var(--wp--preset--color--custom-main-background)"
+				},
+				"dimensions": {
+					"minHeight": ""
+				},
+				"elements": {
+					"link": {
+						":hover": {
+							"color": {
+								"text": "var(--wp--preset--color--custom-main-background)"
+							}
+						},
+						"color": {
+							"text": "var(--wp--preset--color--custom-main-background)"
+						}
+					}
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lato)",
+					"fontSize": "var(--wp--preset--font-size--custom-4)",
+					"fontStyle": "normal",
+					"fontWeight": "300"
 				}
 			}
 		},
@@ -259,10 +354,10 @@
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--lato)",
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var(--wp--preset--font-size--custom-3)",
 					"fontStyle": "normal",
 					"fontWeight": "400",
-					"textTransform": "uppercase"
+					"textTransform": "none"
 				}
 			},
 			"caption": {
@@ -271,9 +366,9 @@
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--lato)",
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var(--wp--preset--font-size--custom-3)",
 					"fontStyle": "italic",
-					"fontWeight": "300",
+					"fontWeight": "400",
 					"textTransform": "none"
 				}
 			},
@@ -344,6 +439,13 @@
 				},
 				"color": {
 					"text": "var(--wp--preset--color--custom-links-secondary-background)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lato)",
+					"fontSize": "var(--wp--preset--font-size--custom-3)",
+					"fontStyle": "normal",
+					"fontWeight": "400",
+					"textDecoration": "none"
 				}
 			}
 		},
@@ -358,7 +460,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--lato)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontSize": "var(--wp--preset--font-size--custom-3)",
 			"fontStyle": "normal",
 			"fontWeight": "300",
 			"lineHeight": "1.5"

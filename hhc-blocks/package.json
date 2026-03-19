@@ -1,7 +1,7 @@
 {
 	"name": "hhc-blocks",
 	"version": "0.1.0",
-	"description": "Custom blocks for Helping Hands Counselling site.",
+	"description": "Custom blocks for the Helping Hands Counselling site.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

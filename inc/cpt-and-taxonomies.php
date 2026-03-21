@@ -194,7 +194,7 @@ function helpinghands_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-format-quote',
-        'supports'           => array('editor'),
+        'supports'           => array('title', 'editor'),
         'template_lock'      => 'all', // lock the template to prevent adding/removing blocks
         'template'           => array(
 

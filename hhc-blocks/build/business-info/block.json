@@ -1,20 +1,21 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "hhc-blocks/hhc-blocks",
+  "name": "hhc-blocks/business-info",
   "version": "0.1.0",
-  "title": "HHC Blocks",
+  "title": "Business Info",
   "category": "text",
-  "icon": "block-default",
-  "description": "Custom blocks for the Helping Hands Counselling site.",
+  "icon": "store",
+  "description": "Custom block for the ACF Pro Options Page.",
   "example": {},
   "supports": {
+    "align": false,
     "html": false
   },
-  "textdomain": "hhc-blocks",
+  "textdomain": "business-info",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
   "render": "file:./render.php",
+  "style": "file:./style-index.css",
   "viewScript": "file:./view.js"
 }

@@ -31,8 +31,8 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'HHC Blocks – hello from the editor!', 'hhc-blocks' ) }
+		<p {...useBlockProps()}>
+			Business information goes here.
 		</p>
 	);
 }

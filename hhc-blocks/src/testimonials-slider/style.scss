@@ -1,0 +1,74 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@use 'swiper/css/bundle';
+
+.wp-block-pullquote {
+    padding: 1.5rem 0;
+}
+
+.wp-block-pullquote p,
+.wp-block-pullquote cite {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.wp-block-pullquote blockquote {
+    padding: 1.9rem;
+    margin: 0 0.4rem;
+}
+
+@media (min-width: 37.5em) {
+    .wp-block-pullquote p,
+    .wp-block-pullquote cite {
+        text-align: center;
+    }
+
+    .wp-block-pullquote blockquote {
+        margin: 0 1.9rem;
+    }
+}
+
+.wp-block-hhc-blocks-testimonials-slider {
+    position: relative;
+    background-color: #EAB394;
+    border: 1px solid #2C4A7A;
+    border-radius: 5px;
+}
+
+.swiper:not(.swiper-navigation-disabled) {
+    width: calc(100% - 4rem);
+}
+
+.swiper:not(.swiper-navigation-disabled)~.swiper-button-next {
+    margin-right: 0.5rem;
+}
+
+.swiper:not(.swiper-navigation-disabled)~.swiper-button-prev {
+    margin-left: 0.5rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: none;
+    border: none;
+    color: var(--arrow-color);
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 1.5rem;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #664024;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--arrow-color)
+}

@@ -11,5 +11,7 @@
  */
 ?>
 <p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'HHC Blocks – hello from a dynamic block!', 'hhc-blocks' ); ?>
+
+	© <?php echo date( 'Y' ); ?> Helping Hands Counselling
+
 </p>

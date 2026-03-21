@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hhc-blocks/testimonials-slider",
+  "version": "0.1.0",
+  "title": "Testimonials Slider",
+  "category": "design",
+  "icon": "format-quote",
+  "description": "A custom block for client testimonials.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "multiple": false
+  },
+  "attributes": {
+    "navigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "pagination": {
+      "type": "boolean",
+      "default": true
+    },
+    "arrowColor": {
+      "type": "string",
+      "default": "#664024"
+    }
+  },
+  "textdomain": "testimonials-slider",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

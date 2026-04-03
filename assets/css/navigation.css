@@ -1,0 +1,135 @@
+/* =================================================
+NAVIGATION 
+================================================= */
+
+/* ------------------ Header -------------------  */
+
+header {
+    z-index: 300;
+}
+
+/* Hover states */
+.wp-block-navigation-item.home-link.wp-block-navigation-link a:hover,
+.wp-block-navigation-item.services-link.wp-block-navigation-link a:hover,
+.about-link.wp-block-navigation-submenu a:hover,
+.wp-block-navigation-item.resources-link.wp-block-navigation-link a:hover {
+    color: #664024;
+    text-decoration: underline;
+}
+
+.wp-block-navigation-item.meet-christine.wp-block-navigation-link a:hover,
+.wp-block-navigation-item.faq-rates.wp-block-navigation-link a:hover,
+.wp-block-navigation-item.general-policies.wp-block-navigation-link a:hover {
+    background-color: #14243E;
+    color: #F2E9DD !important;
+}
+
+.wp-block-navigation-item.contact-link {
+    padding: 10px;
+    background-color: #7bbdbb;
+    color: #14243E;
+    border-radius: 5px;
+}
+
+.wp-block-navigation-item.contact-link:hover {
+    background-color: #664024;
+    color: #F2E9DD;
+}
+
+/* Round the whole dropdown block visually */
+.wp-block-navigation .wp-block-navigation-item.about-link.wp-block-navigation-submenu>.wp-block-navigation__submenu-container {
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+/* Mobile Navigation -----------------------------*/
+
+.header-nav-links.wp-block-navigation {
+    order: 3;
+}
+
+@media (min-width: 48.25em) {
+    .wp-block-navigation.is-layout-flex.wp-block-navigation.is-layout-flex {
+        order: 3;
+    }
+}
+
+@media (max-width: 36.25em) {
+    .wp-block-group.header-address {
+        display: none;
+    }
+}
+
+.wp-block-navigation__responsive-container-open {
+    background-color: #2C4A7A;
+    color: #F2E9DD;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+@media (max-width: 48.1875em) {
+  .wp-block-navigation__responsive-container-open {
+    /* display: flex !important;  */
+    /* show hamburger menu */
+  }
+
+  .wp-block-navigation__responsive-container {
+    /* display: none !important;  */
+    /* hide desktop menu */
+  }
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+    margin: 0 1rem 1.5rem 0;
+    border: 2px solid #2C4A7A;
+    border-radius: 0 0 180px 0;
+}
+
+.wp-block-navigation__responsive-container-close {
+    margin: 1rem; /* Margin around close button */
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
+    align-items: flex-start;
+}
+
+/* ------------------ Footer -------------------  */
+
+/* Hover states */
+.wp-block-navigation__container.footer-links.wp-block-navigation .wp-block-navigation-item.wp-block-navigation-link:hover {
+    color: #2C4A7A;
+    text-decoration: underline;
+}
+
+.wp-block-hhc-blocks-business-info a:hover,
+.wp-block-group .quinnful-designs a:hover,
+.email-address-link a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons ---------------------------------------*/
+
+/* Instagram button */
+.wp-block-social-links .wp-social-link svg {
+    width: 40px;
+    height: 40px;
+}
+
+.wp-block-social-links .wp-social-link span:not(.screen-reader-text) {
+    font-size: 1rem;
+}
+
+.wp-block-social-links .wp-social-link.wp-social-link-instagram:hover {
+    transform: none !important;
+    /* Remove default hover scale */
+    background-color: #664024 !important;
+}
+
+/* Psychology Today button */
+.wp-block-image.psychtoday {
+    transition: transform 0.2s ease-in;
+}
+
+.wp-block-image.psychtoday:hover {
+    transform: scale(1.1);
+}

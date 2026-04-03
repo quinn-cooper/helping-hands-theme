@@ -87,4 +87,24 @@ function hhc_render_testimonials_slider( $attributes ) {
     <?php
     return ob_get_clean();
 }
+
+// <!-- Force external Resource links and Psychology Today button to open in a new tab -->
+function hhc_new_tab( $block_content, $block ) {
+
+    // Resource buttons
+    if (( is_singular( 'resources' ) || is_post_type_archive( 'resources' ) ) && ( $block['blockName'] === 'core/button' || $block['blockName'] === 'core/buttons' )) {
+        // Add target="_blank" to all anchor tags in the block content
+        $block_content = str_replace( '<a ', '<a target="_blank" rel="noopener noreferrer" ', $block_content );
+    }
+
+    // Psychology Today button
+    if($block['blockName'] === 'core/image' && strpos($block_content, 'wp-block-image size-large is-resized has-custom-border psychtoday') !== false) {
+        // Add target="_blank" to all anchor tags in the block content
+        $block_content = str_replace( '<a ', '<a target="_blank" rel="noopener noreferrer" ', $block_content );
+    }
+    return $block_content;
+}
+add_filter('render_block', 'hhc_new_tab', 10, 2);
+
 ?>
+

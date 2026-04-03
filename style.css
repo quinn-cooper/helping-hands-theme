@@ -14,4 +14,307 @@ Text Domain: helping-hands-theme
 Update URI: false
 */
 
-/* Contact Form */
+/* -------------------------------------------------
+>>>>>>> TABLE OF CONTENTS
+----------------------------------------------------
+1. Global Styles
+        - Button Styles
+2. Navigation (navigation.css)
+3. Cookies
+        - Container
+4. Home
+        - How to Get Started
+        - What I Offer
+        - Testimonials
+5. Services
+6. About
+7. Meet Christine
+8. FAQ & Rates
+9. Resources
+10. Contact
+        - Contact Form
+----------------------------------------------------
+------------------------------------------------- */
+
+
+/* =================================================
+1. GLOBAL STYLES
+================================================= */
+
+/* --------------- Button Styles ---------------  */
+
+/* Landing Page */
+.wp-block-button.explore-services-btn a:hover {
+    background: transparent !important;
+    color: #2c4a7a !important;
+    border: 2px solid #2c4a7a !important;
+}
+
+.wp-block-button.contact-me-btn a:hover {
+    background: transparent !important;
+    color: #664024 !important;
+    border: 2px solid #664024 !important;
+}
+
+.wp-block-button.learn-more a:hover {
+    background-color: #664024;
+    color: #F2E9DD !important;
+}
+
+.wp-block-button.meet-christine-btn a:hover {
+    background: transparent !important;
+    color: #664024 !important;
+    border: 2px solid #664024 !important;
+}
+
+.wp-block-button.read-faq-btn a:hover {
+    background-color: #14243e !important;
+    color: #F2E9DD !important;
+    border: 2px solid #14243e !important;
+}
+
+/* 404 Template */
+.is-style-outline.return-home a:hover,
+.is-style-outline.view-services2 a:hover,
+.is-style-outline.contact-me2 a:hover {
+    background-color: #2c4a7a !important;
+    color: #F2E9DD !important;
+}
+
+/* Accordion styles */
+
+.wp-block-accordion-item.wp-block-accordion-item-is-layout-flow,
+.wp-block-accordion-item.wp-block-accordion-item-is-layout-flow * {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-decoration-thickness: 0 !important;
+    text-underline-offset: 0 !important;
+    text-decoration-skip-ink: none !important;
+    /* border: none !important; */
+    /* border-bottom: none !important; */
+}
+
+/* =================================================
+2. NAVIGATION - refer to navigation.css
+================================================= */
+
+
+/* =================================================
+3. COOKIES 
+================================================= */
+
+/* ----------------- Container ------------------ */
+
+/* Mobile view */
+.cookie-modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+
+    /* center position */
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Full width minus padding */
+    width: calc(100% - 50px);
+    max-width: 400px;
+
+    background: #7BBDBB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 39px 2px rgba(20, 36, 62, 0.95);
+    z-index: 9999;
+}
+
+/* Desktop view */
+@media (min-width: 48.4375em) {
+    .cookie-modal {
+        /* left position */
+        left: 20px;
+        bottom: 20px;
+        padding: 20px;
+
+        /* remove mobile centering */
+        transform: none;
+
+        /* remove mobile width */
+        width: auto;
+        max-width: none;
+    }
+}
+
+.cookie-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cookie-modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cookie-modal button {
+    all: unset;
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: #2C4A7A;
+    color: #F2E9DD;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-modal button:hover {
+    background-color: #1A2B4C;
+}
+
+/* =================================================
+4. HOME
+================================================= */
+
+/* Scale fluidity for site title based on viewport width */
+h1.wp-block-site-title {
+    font-size: clamp(2.9rem, 5vw, 4rem);
+}
+
+/*  */
+
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-image-container {
+  position: relative;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* To apply gradient to image only, not the text */
+.hero-image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #f2e9dd 100%);
+  z-index: 2; /* Above image, below text */
+}
+
+.site-title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers the text */
+  width: 100%;
+  z-index: 3; /* Above gradient */
+  text-align: center;
+  padding: 0 1rem; /* Helps mobile readability */
+}
+
+
+
+/*  */
+
+/* -------------- Where to Start ---------------- */
+
+.wp-block-image.size-small-portrait.has-custom-border.christine-photo {
+    max-width: 300px;
+}
+
+.wp-block-list.has-custom-4-font-size {
+    line-height: 2;
+}
+
+/* -------------- Who I Support ----------------- */
+
+.cherry-bloss-icon,
+.sprout-icon,
+.mental-health-icon {
+    width: 80px;
+    height: auto;
+}
+
+/* --------------- What I Offer ----------------  */
+
+/* Change grid layout based on viewport width */
+.wp-block-group.offer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 37.5em) {
+    .wp-block-group.offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =================================================
+5. SERVICES
+================================================= */
+
+.services-image-container {
+    outline: 3px solid red;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-image img {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    will-change: transform;
+    transform: translateY(0);
+}
+
+/* =================================================
+6. ABOUT
+================================================= */
+
+
+
+/* =================================================
+7. MEET CHRISTINE
+================================================= */
+
+.overlay-column {
+  position: relative;
+  overflow: visible; /* allows overlap outside the column */
+}
+
+.text-group {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  z-index: 5;
+
+  /* overlap the image */
+  transform: translateY(-40%);
+}
+
+/* =================================================
+8. FAQ & RATES
+================================================= */
+
+
+
+/* =================================================
+9. RESOURCES
+================================================= */
+
+
+
+/* =================================================
+10. CONTACT
+================================================= */
+
+/* --------------- Contact Form ----------------  */

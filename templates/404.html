@@ -1,27 +1,43 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:template-part {"slug":"header","tagName":"header"} /--></div>
+<!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained","contentSize":""}} -->
-<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"textAlign":"left","level":1} -->
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"},"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"layout":{"type":"constrained","contentSize":"60rem"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","orientation":"horizontal"}} -->
+<div class="wp-block-group"><!-- wp:group {"tagName":"aside","metadata":{"name":"Aside"},"style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"right":"var:preset|spacing|20"}}},"layout":{"type":"constrained","contentSize":"28rem"}} -->
+<aside class="wp-block-group" style="padding-right:var(--wp--preset--spacing--20)"><!-- wp:heading {"textAlign":"left","level":1} -->
 <h1 class="wp-block-heading has-text-align-left">Page Not Found</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>We couldn't find the page you were looking for, as it may have moved or no longer exists. Please explore the site using the navigation menu or use one of the links below.</p>
+<p>We couldn't find the page you were looking for, as it may have moved or no longer exists. Please explore the site using the navigation menu or click on one of the links below.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"left"}} -->
-<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="http://helping-hands-counselling.local/">Return to home</a></div>
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|50"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"left"}} -->
+<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20)"><!-- wp:button {"width":50,"className":"is-style-outline return-home"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline return-home"><a class="wp-block-button__link wp-element-button" href="http://helping-hands-counselling.local/">Return to Home</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"custom-secondary-background","textColor":"custom-main-text","className":"is-style-fill","style":{"elements":{"link":{"color":{"text":"var:preset|color|custom-main-text"}}}}} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-custom-main-text-color has-custom-secondary-background-background-color has-text-color has-background has-link-color wp-element-button" href="http://helping-hands-counselling.local/services/">View services</a></div>
+<!-- wp:button {"width":50,"className":"is-style-outline view-services2"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline view-services2"><a class="wp-block-button__link wp-element-button" href="http://helping-hands-counselling.local/services/">View Services</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"custom-links-secondary-background","textColor":"custom-main-background","className":"is-style-fill","style":{"elements":{"link":{"color":{"text":"var:preset|color|custom-main-background"}}}}} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-custom-main-background-color has-custom-links-secondary-background-background-color has-text-color has-background has-link-color wp-element-button" href="http://helping-hands-counselling.local/contact/">Contact me</a></div>
+<!-- wp:button {"width":50,"className":"is-style-outline contact-me2"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline contact-me2"><a class="wp-block-button__link wp-element-button" href="http://helping-hands-counselling.local/contact/">Contact Me</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"width":50,"className":"is-style-outline contact-me2"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline contact-me2"><a class="wp-block-button__link wp-element-button" href="http://helping-hands-counselling.local/resources/">Access Resources</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons --></aside>
+<!-- /wp:group -->
+
+<!-- wp:cover {"url":"http://helping-hands-counselling.local/wp-content/uploads/2026/03/moth-and-wheat.jpg","hasParallax":true,"dimRatio":0,"overlayColor":"custom-main-background","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","style":{"layout":{"selfStretch":"fill","flexSize":null},"border":{"radius":{"topLeft":"5px","topRight":"5px","bottomLeft":"5px","bottomRight":"5px"},"width":"2px"}},"borderColor":"custom-main-text","layout":{"type":"default"}} -->
+<div class="wp-block-cover is-light has-parallax has-border-color has-custom-main-text-border-color" style="border-width:2px;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-left-radius:5px;border-bottom-right-radius:5px"><div class="wp-block-cover__image-background size-full has-parallax" style="background-position:50% 50%;background-image:url(http://helping-hands-counselling.local/wp-content/uploads/2026/03/moth-and-wheat.jpg)"></div><span aria-hidden="true" class="wp-block-cover__background has-custom-main-background-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"></p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:cover --></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -49,7 +49,16 @@ function helping_hands_enqueue_scripts() {
         true //  in footer
     );
 
-    // 2. Initialize JS
+    // 2. Main JS
+    wp_enqueue_script(
+        'helping-hands-script',
+        get_theme_file_uri('js/main.js'),
+        array(),
+        wp_get_theme()->get('Version'),
+        true
+    );
+
+    // 3. Initialize JS
     // Set to false while testing; set to true once it's working  
     // offset forces animation
     wp_add_inline_script(
@@ -59,6 +68,15 @@ function helping_hands_enqueue_scripts() {
             once: false,
             offset: 100 
         });'  
+    );
+
+    // 4. Dynamic pop-up window for cookies
+    wp_enqueue_script(
+        'custom-modal-script',
+        get_template_directory_uri() . '/js/custom-modal.js',
+        array(),
+        '1.0.0',
+        true
     );
 }
 add_action('wp_enqueue_scripts', 'helping_hands_enqueue_scripts');
@@ -74,6 +92,9 @@ function helpinghands_image_sizes() {
 
     // Thumbnail or small preview
     add_image_size('thumbnail', 400, 300, true);
+
+    // Small portrait orientation
+    add_image_size('small-portrait', 600, 820, true);
 
     // Medium size
     add_image_size('medium', 800, 600, true);
@@ -96,6 +117,7 @@ add_action( 'after_setup_theme', 'helpinghands_image_sizes');
 function helpinghands_custom_image_sizes($sizes) {
     $new_sizes = array (
         'thumbnail' => __('Thumbnail (400x300)', 'helping-hands'),
+        'small-portrait' => __('Small Portrait (600x820)', 'helping-hands'),
         'medium' => __('Medium (800x600)', 'helping-hands'),
         'portrait' => __('Portrait (600x900)', 'helping-hands'),
         'featured' => __('Featured (900x800)', 'helping-hands'),
@@ -105,6 +127,26 @@ function helpinghands_custom_image_sizes($sizes) {
     return array_merge($sizes, $new_sizes);
 }
 add_filter('image_size_names_choose', 'helpinghands_custom_image_sizes');
+
+// -------------------------------
+// Cookies
+// -------------------------------
+
+// Output cookie popup HTML in the footer
+function hhc_cookie_modal_html() {
+    ?>
+    <div id="cookie-consent-modal" class="cookie-modal" style="display:none;">
+        <div class="cookie-modal-content">
+            <p>This site uses cookies to improve your experience. Read our <a href="/privacy-policy">Privacy Policy</a> for more information.</p>
+            <div class="cookie-modal-buttons">
+                <button class="accept-cookies">Accept</button>
+                <button class="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+add_action('wp_footer', 'hhc_cookie_modal_html');
 
 // -------------------------------
 // CPTs & Blocks

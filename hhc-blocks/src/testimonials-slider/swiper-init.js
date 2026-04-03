@@ -30,9 +30,6 @@ export function SwiperInit( container, options = {} ) {
         },
         navigation: options?.navigation ? { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } : false,
         pagination: options?.pagination ? {el: '.swiper-pagination', clickable: true } : false,
-
-        // navigation: options?.navigation ? { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } : {enabled: false },
-        // pagination: options?.pagination ? {el: '.swiper-pagination', clickable: true } : {enabled: false },
     };
 
     return new Swiper( container, parameters );

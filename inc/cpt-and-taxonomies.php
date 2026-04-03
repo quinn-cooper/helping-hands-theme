@@ -49,24 +49,20 @@ function helpinghands_register_custom_post_types() {
         'show_in_admin_bar'  => true,
         'show_in_rest'       => true,
         'query_var'          => true, // enables use of WP_Query
-        'rewrite'            => array( 'slug' => 'services' ),
+        'rewrite'            => array( 'slug' => 'service-offerings' ),
         'capability_type'    => 'post',
         'has_archive'        => true, 
         'hierarchical'       => false,
         'menu_position'      => 4,
         'menu_icon'          => 'dashicons-insert',
-        'supports'           => array('editor'),
+        'supports'           => array('title','editor', 'thumbnail'),
         'template_lock'      => 'all', // lock the template to prevent adding/removing blocks
         'template'           => array(
-            array('core/heading', array( 
-            'level' => 3, 
-            'content' => 'Name of Service Offering')),
             array('core/paragraph', array( 
                 'placeholder' => 'Describe the service...' ) ),
-            array('core/image')
         )
     );
-    register_post_type( 'services', $args );
+    register_post_type( 'service-offerings', $args );
 
     // 2. Resources CPT
     $labels = array(
@@ -117,7 +113,7 @@ function helpinghands_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-book', 
-        'supports'           => array('editor'),
+        'supports'           => array('title', 'editor'),
         'template_lock'      => 'all', // lock the template to prevent adding/removing blocks
         'template'           => array(
 

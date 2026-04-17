@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hhc-blocks/link-wrapper",
+	"version": "0.1.0",
+	"title": "Link Wrapper",
+	"category": "widgets",
+	"icon": "admin-links",
+	"description": "A link wrapper custom block.",
+	"attributes": {
+		"url": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {},
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"textdomain": "link-wrapper",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

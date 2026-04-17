@@ -54,7 +54,7 @@ function helpinghands_register_custom_post_types() {
         'has_archive'        => true, 
         'hierarchical'       => false,
         'menu_position'      => 4,
-        'menu_icon'          => 'dashicons-insert',
+        'menu_icon'          => 'dashicons-portfolio',
         'supports'           => array('title','editor', 'thumbnail'),
         'template_lock'      => 'all', // lock the template to prevent adding/removing blocks
         'template'           => array(
@@ -114,31 +114,66 @@ function helpinghands_register_custom_post_types() {
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-book', 
         'supports'           => array('title', 'editor'),
-        'template_lock'      => 'all', // lock the template to prevent adding/removing blocks
-        'template'           => array(
-
-            array('core/button', array( 
-            'placeholder' => 'Enter Resource Name Here...',
-            'backgroundColor' => '#664024', 
-            'textColor' => '#F2E9DD',
-            'url' => '',
-            'lock' => array(
-                    'move'   => true,
-                    'remove' => true,
-        ),
-            )
-            ),
-
-            array('core/paragraph', array( 
-                'placeholder' => 'Describe the resource...',
-                'lock' => array(
-                    'move'   => true,
-                    'remove' => true,
-                ), 
-            )
-            ),
+        'template_lock'      => 'all', // lock the template 
+        'template' => array(
+            array(
+                'hhc-blocks/link-wrapper',
+                array(
+                    'url'  => '',
+                    'lock' => array(
+                        'move'   => true,
+                        'remove' => true,
+                    ),
+                ),
+                array( 
+                    array(
+                        'core/group',
+                        array(
+                            'align'        => 'full',
+                            'lock'         => array(
+                                'move'   => true,
+                                'remove' => true,
+                            ),
+                        ),
+                        array( 
+                            array(
+                                'core/heading',
+                                array(
+                                    'level'       => 2,
+                                    'placeholder' => 'Enter resource name here...',
+                                    'lock'        => array(
+                                        'move'   => true,
+                                        'remove' => true,
+                                    ),
+                                )
+                            ),
+                            array(
+                                'core/paragraph',
+                                array(
+                                    'placeholder' => 'Describe the resource...',
+                                    'lock'        => array(
+                                        'move'   => true,
+                                        'remove' => true,
+                                    ),
+                                )
+                            ),
+                            array(
+                                'core/post-terms',
+                                array(
+                                    'className' => 'post-term',
+                                    'term'      => 'resource_category',
+                                    'lock'      => array(
+                                        'move'   => true,
+                                        'remove' => true,
+                                    ),
+                                )
+                            ),
+                        )
+                    )
                 )
-    );
+            )
+        ),
+        );
     register_post_type( 'resources', $args );
 
     // 3. Testimonials CPT
@@ -210,8 +245,8 @@ add_action( 'init', 'helpinghands_register_custom_post_types' );
 // 1. Resource Categories Taxonomy
 function helpinghands_register_taxonomies() {
     $labels = array(
-        'name'                  => _x( 'Categories', 'taxonomy general name', 'helpinghands-theme' ),
-        'singular_name'         => _x( 'Category', 'taxonomy singular name', 'helpinghands-theme' ),
+        'name'                  => _x( 'Resource Categories', 'taxonomy general name', 'helpinghands-theme' ),
+        'singular_name'         => _x( 'Resource Category', 'taxonomy singular name', 'helpinghands-theme' ),
         'search_items'          => __( 'Search Categories', 'helpinghands-theme' ),
         'all_items'             => __( 'All Categories', 'helpinghands-theme' ),
         'parent_item'           => __( 'Parent Category', 'helpinghands-theme' ),
@@ -222,7 +257,7 @@ function helpinghands_register_taxonomies() {
         'add_new_item'          => __( 'Add New Category', 'helpinghands-theme' ),
         'new_item_name'         => __( 'New Category Name', 'helpinghands-theme' ),
         'template_name'         => __( 'Category Archives', 'helpinghands-theme' ),
-        'menu_name'             => __( 'Categories', 'helpinghands-theme' ),
+        'menu_name'             => __( 'Resource Categories', 'helpinghands-theme' ),
         'not_found'             => __( 'No categories found.', 'helpinghands-theme' ),
         'no_terms'              => __( 'No categories', 'helpinghands-theme' ),
         'items_list_navigation' => __( 'Category list navigation', 'helpinghands-theme' ),
@@ -238,9 +273,10 @@ function helpinghands_register_taxonomies() {
         'show_in_rest'      => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'category' ),
+        'rewrite'           => false,
+
     );
 
-    register_taxonomy( 'category', array( 'resources' ), $args );
+    register_taxonomy( 'resources_category', array( 'resources' ), $args );
 }
 add_action( 'init', 'helpinghands_register_taxonomies' );

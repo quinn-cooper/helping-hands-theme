@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hhc-blocks/business-info-address",
+  "version": "0.1.0",
+  "title": "Business Info - Address",
+  "category": "text",
+  "icon": "location",
+  "description": "Custom block for the address on ACF Options Page",
+  "example": {},
+  "supports": {
+    "align": false,
+    "html": false
+  },
+  "textdomain": "business-info-address",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "render": "file:./render.php",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

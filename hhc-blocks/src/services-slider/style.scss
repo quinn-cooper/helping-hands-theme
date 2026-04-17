@@ -1,0 +1,60 @@
+/* Outer wrapper */
+.wp-block-hhc-blocks-services-cta-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider track */
+.wp-block-hhc-blocks-services-cta-slider .slider-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+/* Each column becomes a slide */
+.wp-block-hhc-blocks-services-cta-slider .wp-block-column {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 600px) {
+    .wp-block-hhc-blocks-services-cta-slider .wp-block-column {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .wp-block-hhc-blocks-services-cta-slider .wp-block-column {
+        flex-basis: 33.333%;
+    }
+}
+
+/* CTA wrapper */
+.cta-wrapper {
+    background: #f2e9dd;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Image group */
+.cta-image-group img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+/* Content group */
+.cta-content-group h3 {
+    margin-top: 1rem;
+}
+
+.cta-content-group .wp-block-button__link {
+    margin-top: 1rem;
+    border: 2px solid #6b4a2b;
+    background: transparent;
+    color: #6b4a2b;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}

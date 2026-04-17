@@ -92,7 +92,8 @@ function hhc_render_testimonials_slider( $attributes ) {
 function hhc_new_tab( $block_content, $block ) {
 
     // Resource buttons
-    if (( is_singular( 'resources' ) || is_post_type_archive( 'resources' ) ) && ( $block['blockName'] === 'core/button' || $block['blockName'] === 'core/buttons' )) {
+    if (( is_singular( 'resources' ) || is_post_type_archive( 'resources' ) ) && ( $block['blockName'] === 'hhc-blocks/link-wrapper' )) {
+
         // Add target="_blank" to all anchor tags in the block content
         $block_content = str_replace( '<a ', '<a target="_blank" rel="noopener noreferrer" ', $block_content );
     }
@@ -105,6 +106,25 @@ function hhc_new_tab( $block_content, $block ) {
     return $block_content;
 }
 add_filter('render_block', 'hhc_new_tab', 10, 2);
+
+
+// Only display 9 posts per page on Resources CPT
+function hhc_resources_archive_posts_per_page( $query ) {
+    // Only modify the main query on the front end
+    if ( ! is_admin() && $query->is_main_query() ) {
+
+        // Resources CPT archive
+        if ( $query->is_post_type_archive( 'resources' ) ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+
+        // Resources Category taxonomy archive
+        if ( $query->is_tax( 'resources_category' ) ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'hhc_resources_archive_posts_per_page' );
 
 ?>
 

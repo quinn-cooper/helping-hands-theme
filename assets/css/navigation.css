@@ -36,6 +36,11 @@ header {
     color: #F2E9DD;
 }
 
+/* Remove extra padding in lower part of the header*/
+.wp-block-group.header-address {
+    padding: 0 !important;
+}
+
 /* Round the whole dropdown block visually */
 .wp-block-navigation .wp-block-navigation-item.about-link.wp-block-navigation-submenu>.wp-block-navigation__submenu-container {
     border-radius: 5px !important;
@@ -43,6 +48,50 @@ header {
 }
 
 /* Mobile Navigation -----------------------------*/
+
+/* Keep header above the mobile menu */
+header.wp-block-template-part {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Push the mobile menu BELOW the header visually */
+.wp-block-navigation__responsive-container {
+    margin-top: calc(var(--wp--preset--spacing--50, 2rem));
+}
+
+/* Make the mobile menu drop down BELOW the header instead of overlaying it */
+/* header .wp-block-navigation__responsive-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+} */
+
+/* Keep your existing border/radius styling for the open state */
+header .wp-block-navigation__responsive-container.is-menu-open {
+    margin: 0 0.8rem 1.5rem 0;
+    border: 2px solid #2C4A7A;
+    border-radius: 0 0 180px 0;
+}
+
+/* Hide the hamburger button when the menu is open */
+.wp-block-navigation__responsive-container-open[aria-expanded="true"] {
+    display: none;
+}
+
+/* (Optional) Ensure the close button is visible and inline */
+.wp-block-navigation__responsive-container.is-menu-open 
+    .wp-block-navigation__responsive-container-close {
+    display: block;
+}
+
+
+
+/*  */
 
 .header-nav-links.wp-block-navigation {
     order: 3;
@@ -80,17 +129,13 @@ header {
 }
 
 .wp-block-navigation__responsive-container.is-menu-open {
-    margin: 0 1rem 1.5rem 0;
+    margin: 0 0.8rem 1.5rem 0;
     border: 2px solid #2C4A7A;
     border-radius: 0 0 180px 0;
 }
 
 .wp-block-navigation__responsive-container-close {
     margin: 1rem; /* Margin around close button */
-}
-
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
-    align-items: flex-start;
 }
 
 /* ------------------ Footer -------------------  */
@@ -105,6 +150,19 @@ header {
 .wp-block-group .quinnful-designs a:hover,
 .email-address-link a:hover {
     text-decoration: underline;
+}
+
+/* Center columns on mobile devices */
+@media (max-width: 48.8125em) {
+    .wp-block-template-part {
+        align-items: center !important;
+    }
+
+    /* .wp-block-column {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    } */
 }
 
 /* Buttons ---------------------------------------*/

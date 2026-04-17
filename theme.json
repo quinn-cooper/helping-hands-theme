@@ -3,6 +3,261 @@
 	"version": 3,
 	"settings": {
 		"appearanceTools": true,
+		"blocks": {
+			"core/image": {
+				"appearanceTools": true,
+				"color": {
+					"background": true,
+					"custom": true,
+					"customDuotone": true,
+					"customGradient": true,
+					"defaultDuotone": true,
+					"defaultGradients": true,
+					"defaultPalette": true,
+					"duotone": [],
+					"gradients": [],
+					"palette": [
+						{
+							"color": "#f2e9dd",
+							"name": "Main background",
+							"slug": "custom-main-background"
+						},
+						{
+							"color": "#14243e",
+							"name": "Main text",
+							"slug": "custom-main-text"
+						},
+						{
+							"color": "#2c4a7a",
+							"name": "Icons & CTAs",
+							"slug": "custom-icons-ct-as"
+						},
+						{
+							"color": "#7bbdbb",
+							"name": "Secondary background",
+							"slug": "custom-secondary-background"
+						},
+						{
+							"color": "#664024",
+							"name": "Links, secondary background",
+							"slug": "custom-links-secondary-background"
+						},
+						{
+							"color": "#eab394",
+							"name": "Secondary background",
+							"slug": "custom-secondary-background-1"
+						}
+					],
+					"text": true
+				},
+				"layout": {
+					"contentSize": "55rem",
+					"wideSize": "62.5rem"
+				},
+				"lightbox": {
+					"allowEditing": true,
+					"enabled": false
+				},
+				"shadow": {
+					"defaultPresets": true,
+					"presets": []
+				},
+				"spacing": {
+					"customSpacingSize": true,
+					"defaultSpacingSizes": true,
+					"spacingScale": {
+						"default": {
+							"increment": 1.5,
+							"mediumStep": 1.5,
+							"operator": "*",
+							"steps": 7,
+							"unit": "rem"
+						}
+					},
+					"spacingSizes": [],
+					"units": [
+						"%",
+						"px",
+						"em",
+						"rem",
+						"vh",
+						"vw"
+					]
+				},
+				"typography": {
+					"customFontSize": true,
+					"defaultFontSizes": true,
+					"dropCap": true,
+					"fontFamilies": [
+						{
+							"fontFace": [
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "normal",
+									"fontWeight": "100",
+									"src": [
+										"file:./assets/fonts/lato/lato-100-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "normal",
+									"fontWeight": "300",
+									"src": [
+										"file:./assets/fonts/lato/lato-300-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"src": [
+										"file:./assets/fonts/lato/lato-400-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "normal",
+									"fontWeight": "700",
+									"src": [
+										"file:./assets/fonts/lato/lato-700-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "italic",
+									"fontWeight": "100",
+									"src": [
+										"file:./assets/fonts/lato/lato-100-italic.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "italic",
+									"fontWeight": "300",
+									"src": [
+										"file:./assets/fonts/lato/lato-300-italic.woff2"
+									]
+								},
+								{
+									"fontFamily": "Lato",
+									"fontStyle": "italic",
+									"fontWeight": "400",
+									"src": [
+										"file:./assets/fonts/lato/lato-400-italic.woff2"
+									]
+								}
+							],
+							"fontFamily": "Lato, sans-serif",
+							"name": "Lato",
+							"slug": "lato"
+						},
+						{
+							"fontFace": [
+								{
+									"fontFamily": "\"Cormorant Infant\"",
+									"fontStyle": "normal",
+									"fontWeight": "300",
+									"src": [
+										"file:./assets/fonts/cormorant-infant/cormorant-infant-300-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "\"Cormorant Infant\"",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"src": [
+										"file:./assets/fonts/cormorant-infant/cormorant-infant-400-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "\"Cormorant Infant\"",
+									"fontStyle": "normal",
+									"fontWeight": "500",
+									"src": [
+										"file:./assets/fonts/cormorant-infant/cormorant-infant-500-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "\"Cormorant Infant\"",
+									"fontStyle": "normal",
+									"fontWeight": "600",
+									"src": [
+										"file:./assets/fonts/cormorant-infant/cormorant-infant-600-normal.woff2"
+									]
+								},
+								{
+									"fontFamily": "\"Cormorant Infant\"",
+									"fontStyle": "normal",
+									"fontWeight": "700",
+									"src": [
+										"file:./assets/fonts/cormorant-infant/cormorant-infant-700-normal.woff2"
+									]
+								}
+							],
+							"fontFamily": "\"Cormorant Infant\", serif",
+							"name": "Cormorant Infant",
+							"slug": "cormorant-infant"
+						}
+					],
+					"fontSizes": [
+						{
+							"fluid": {
+								"max": "0.75rem",
+								"min": "0.6rem"
+							},
+							"name": "XSmall",
+							"size": "0.7rem",
+							"slug": "custom-1"
+						},
+						{
+							"fluid": {
+								"max": "0.95rem",
+								"min": "0.8rem"
+							},
+							"name": "Small",
+							"size": "0.75rem",
+							"slug": "custom-2"
+						},
+						{
+							"fluid": {
+								"max": "1.15rem",
+								"min": "1rem"
+							},
+							"name": "Mid",
+							"size": "0.85rem",
+							"slug": "custom-3"
+						},
+						{
+							"fluid": {
+								"max": "1.3rem",
+								"min": "1.2rem"
+							},
+							"name": "Large",
+							"size": "0.95rem",
+							"slug": "custom-4"
+						},
+						{
+							"fluid": {
+								"max": "1.45rem",
+								"min": "1.35rem"
+							},
+							"name": "XLarge",
+							"size": "1.2rem",
+							"slug": "custom-5"
+						}
+					],
+					"fontStyle": true,
+					"fontWeight": true,
+					"letterSpacing": true,
+					"textAlign": true,
+					"textDecoration": true,
+					"textTransform": true,
+					"writingMode": false
+				},
+				"useRootPaddingAwareAlignments": true
+			}
+		},
 		"color": {
 			"palette": [
 				{
@@ -42,7 +297,38 @@
 			"wideSize": "62.5rem"
 		},
 		"shadow": {
-			"presets": []
+			"presets": [
+				{
+					"name": "High Blur Shadow",
+					"shadow": "12px 12px 45px 0 #14243e",
+					"slug": "shadow-1"
+				},
+				{
+					"name": "Low Blur Shadow",
+					"shadow": "6px 6px 9px 0 #14243e",
+					"slug": "shadow-2"
+				},
+				{
+					"name": "Outline Shadow",
+					"shadow": "6px 6px 0px -1px #f2e9dd, 6px 6px 0px 2px #14243e",
+					"slug": "shadow-3"
+				},
+				{
+					"name": "Dark Blue Shadow",
+					"shadow": "6px 6px 0px 0 #14243e",
+					"slug": "shadow-4"
+				},
+				{
+					"name": "Med Blue Show",
+					"shadow": "6px 6px 0px 0 #2c4a7a",
+					"slug": "shadow-5"
+				},
+				{
+					"name": "Brown Shadow",
+					"shadow": "6px 6px 0px 0 #664024",
+					"slug": "shadow-6"
+				}
+			]
 		},
 		"spacing": {
 			"units": [
@@ -344,6 +630,37 @@
 			"core/heading": {
 				"typography": {
 					"textDecoration": "none"
+				}
+			},
+			"core/image": {
+				"variations": {
+					"rounded": {
+						"border": {
+							"bottom": {
+								"color": "var(--wp--preset--color--custom-main-text)",
+								"style": "solid",
+								"width": "2px"
+							},
+							"color": null,
+							"left": {
+								"color": "var(--wp--preset--color--custom-main-text)",
+								"style": "solid",
+								"width": "2px"
+							},
+							"right": {
+								"color": "var(--wp--preset--color--custom-main-text)",
+								"style": "solid",
+								"width": "2px"
+							},
+							"style": null,
+							"top": {
+								"color": "var(--wp--preset--color--custom-main-text)",
+								"style": "solid",
+								"width": "2px"
+							},
+							"width": null
+						}
+					}
 				}
 			}
 		},

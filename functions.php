@@ -78,6 +78,15 @@ function helping_hands_enqueue_scripts() {
         '1.0.0',
         true
     );
+
+    // 5. Services Slider JS
+    wp_enqueue_script(
+        'services-slider-js',
+        get_theme_file_uri('js/services-slider.js'),
+        array(),
+        wp_get_theme()->get('Version'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'helping_hands_enqueue_scripts');
 
@@ -157,3 +166,32 @@ require get_theme_file_path() . '/inc/cpt-and-taxonomies.php';
 
 // Register Blocks
 require get_theme_file_path() . '/hhc-blocks/hhc-blocks.php';
+
+// -------------------------------
+// Dashboard Customizations
+// -------------------------------
+
+// Remove Posts menu from admin
+function remove_posts_sidebar() {
+    remove_menu_page('edit.php'); // Posts
+}
+add_action('admin_menu', 'remove_posts_sidebar');
+
+function remove_posts_top_menu() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_node('new-post'); // Remove Posts from top admin menu
+}
+add_action('admin_bar_menu', 'remove_posts_top_menu', 999);
+
+// Remove Comments menu from admin
+
+function remove_comments_sidebar() {
+    remove_menu_page('edit-comments.php'); // Remove Comments from admin sidebar
+}
+add_action('admin_menu', 'remove_comments_sidebar');
+
+function remove_comments_top_menu() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_node('comments'); // Remove Comments from top admin menu
+}
+add_action('admin_bar_menu', 'remove_comments_top_menu', 999);

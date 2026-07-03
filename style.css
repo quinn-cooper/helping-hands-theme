@@ -2,7 +2,7 @@
 Theme Name: Helping Hands Theme
 Theme URI: http://www.helpinghandscounselling.com
 Author: Quinn Cooper
-Author URI: http://www.quinnfulcode.com
+Author URI: http://www.quinnfuldesigns.com
 Description: Theme for Helping Hands Counselling.
 Requires at least: 6.9
 Tested up to: 6.9
@@ -18,6 +18,8 @@ Update URI: false
 >>>>>>> TABLE OF CONTENTS
 ----------------------------------------------------
 1. Global Styles
+        - Skip Link
+        - Link Styles
         - Button Styles
 2. Navigation (navigation.css)
 3. Cookies
@@ -26,105 +28,100 @@ Update URI: false
             - Desktop View
         - Content
 4. Home
-        - Where to Start
-        - Who I Support
+        - Hero Image
+        - Button Styles
+        - Christine Bio
+        - Services
+            - Images
+            - Learn More Button
+            - Grid Layout
         - What I Offer
         - Testimonials
 5. Services
 6. About
+        - CTA Columns
 7. Meet Christine
+        - Overlap Group
+        - Profile Photo
 8. FAQ & Rates
+        - Accordion
 9. Resources
+        - Header
         - Taxonomy Terms Grid
             - Breakpoints
         - Resources Posts Grid
-            - Spacing
             - Hover Effect
             - Breakpoints
 10. Contact
         - Contact Form
+            - Field Border
+            - Dropdown Styles
+            - Hover States
 ----------------------------------------------------
 ------------------------------------------------- */
-
 
 /* =================================================
 1. GLOBAL STYLES
 ================================================= */
 
+/* ----------------- Skip Link -----------------  */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px 16px;
+  background: #fff;
+  color: #2c4a7a;
+  z-index: 9999;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+}
+
+p a:active {
+  outline: 2px solid #664024;
+  opacity: 0.6;
+}
+
+a:focus-visible {
+  outline: 2px dashed #2c4a7a !important;
+  outline-offset: 2px;
+}
+
+
 /* ---------------- Link Styles ----------------  */
 
 p a:hover {
-    text-decoration: underline !important;
+  text-decoration: underline !important;
 }
 
 /* --------------- Button Styles ---------------  */
 
-/* Landing Page */
-.wp-block-button.explore-services-btn a:hover {
-    background: transparent !important;
-    color: #2c4a7a !important;
-    border: 2px solid #2c4a7a !important;
-}
-
-.wp-block-button.contact-me-btn a:hover {
-    background: transparent !important;
-    color: #664024 !important;
-    border: 2px solid #664024 !important;
-}
-
-.wp-block-button.learn-more a:hover {
-    background-color: #664024;
-    color: #F2E9DD !important;
-}
-
-.wp-block-button.meet-christine-btn a:hover {
-    background: transparent !important;
-    color: #664024 !important;
-    border: 2px solid #664024 !important;
-}
-
-.wp-block-button.read-faq-btn a:hover {
-    background-color: #14243e !important;
-    color: #F2E9DD !important;
-    border: 2px solid #14243e !important;
-}
-
 /* Meet Christine */
 .contact-cta a:hover {
-    background: transparent !important;
-    color: #eab394 !important;
-    border: 2px solid #eab394 !important;
+  background: transparent !important;
+  color: #eab394 !important;
+  border: 2px solid #eab394 !important;
 }
 
 /* 404 Template */
 .is-style-outline.return-home a:hover,
 .is-style-outline.view-services2 a:hover,
 .is-style-outline.contact-me2 a:hover {
-    background-color: #2c4a7a !important;
-    color: #F2E9DD !important;
+  background-color: #2c4a7a !important;
+  color: #f2e9dd !important;
 }
 
-/* ------------- Accordion Styles --------------  */
-
-/* Increase toggle icon size */
-.wp-block-accordion-heading__toggle-icon {
-    font-size: 3rem;
-}
-
-/* Remove text decoration */
-.wp-block-accordion-item.wp-block-accordion-item-is-layout-flow,
-.wp-block-accordion-item.wp-block-accordion-item-is-layout-flow * {
-    text-decoration: none !important;
-    text-decoration-line: none !important;
-    text-decoration-thickness: 0 !important;
-    text-underline-offset: 0 !important;
-    text-decoration-skip-ink: none !important;
-}
+/* =================================================
+2. DASHBOARD CUSTOMIZATIONS
+================================================= */
 
 /* =================================================
 2. NAVIGATION - refer to navigation.css
 ================================================= */
-
 
 /* =================================================
 3. COOKIES  
@@ -134,217 +131,368 @@ p a:hover {
 
 /* >>>>>> Mobile View <<<<<< */
 .cookie-modal {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-
-    /* center position */
-    left: 50%;
-    transform: translateX(-50%);
-
-    /* Full width minus padding */
-    width: calc(100% - 50px);
-    max-width: 400px;
-
-    background: #7BBDBB;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 8px 8px 39px 2px rgba(20, 36, 62, 0.95);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  max-width: 400px;
+  background: #7bbdbb;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 8px 8px 39px 2px rgba(20, 36, 62, 0.95);
+  z-index: 9999;
 }
 
 /* >>>>>> Desktop View <<<<<< */
 @media (min-width: 48.4375em) {
-    .cookie-modal {
-        /* Left position */
-        left: 20px;
-        bottom: 20px;
-        padding: 20px;
-
-        /* Remove mobile centering */
-        transform: none;
-
-        /* Remove mobile width */
-        width: auto;
-        max-width: none;
-    }
+  .cookie-modal {
+    left: 20px;
+    bottom: 20px;
+    padding: 20px;
+    transform: none;
+    width: auto;
+    max-width: none;
+  }
 }
 
 /* ------------------ Content ------------------- */
 
 .cookie-modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Change button layout to inline */
 .cookie-modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .cookie-modal button {
-    all: unset;
-    /* Remove default button styles */
-    font-weight: 400;
-    font-size: 1.1rem;
-    background-color: #2C4A7A;
-    color: #F2E9DD;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  all: unset; /* Remove default button styles */
+  font-weight: 400;
+  font-size: 1.1rem;
+  background-color: #2c4a7a;
+  color: #f2e9dd;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .cookie-modal button:hover {
-    background-color: #1A2B4C;
+  background-color: #1a2b4c;
 }
 
 /* =================================================
 4. HOME
 ================================================= */
 
-/* Scale fluidity for site title based on viewport width */
+/* ---------------- Hero Image -----------------  */
+
 h1.wp-block-site-title {
-    font-size: clamp(2.9rem, 5vw, 4rem);
+  font-size: clamp(2.9rem, 5vw, 4rem);
 }
 
-/*  */
-
 .hero-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .hero-image-container {
-    position: relative;
+  position: relative;
 }
 
 .hero-image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-/* To apply gradient to image only, not the text */
+/* Apply gradient to image only */
 .hero-image-container::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent, #f2e9dd 100%);
-    z-index: 2;
-    /* Above image, below text */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #f2e9dd 95%);
+  z-index: 2;
 }
 
 .site-title-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* centers the text */
-    width: 100%;
-    z-index: 3;
-    /* Above gradient */
-    text-align: center;
-    padding: 0 1rem;
-    /* Helps mobile readability */
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  padding: 0 1rem;
 }
 
+/* --------------- Button Styles ---------------  */
 
+.wp-block-button.explore-services-btn a:hover {
+  background: transparent !important;
+  color: #2c4a7a !important;
+  border: 2px solid #2c4a7a !important;
+}
 
-/*  */
+.wp-block-button.contact-me-btn a:hover {
+  background: transparent !important;
+  color: #664024 !important;
+  border: 2px solid #664024 !important;
+}
 
-/* -------------- Where to Start ---------------- */
+.wp-block-button.learn-more a:hover {
+  background-color: #664024;
+  color: #f2e9dd !important;
+}
+
+.wp-block-button.meet-christine-btn a:hover {
+  background: transparent !important;
+  color: #664024 !important;
+  border: 2px solid #664024 !important;
+}
+
+.wp-block-button.read-faq-btn a:hover {
+  background-color: #14243e !important;
+  color: #f2e9dd !important;
+  border: 2px solid #14243e !important;
+}
+
+/* -------------- Christine Bio ----------------- */
 
 .wp-block-image.size-small-portrait.has-custom-border.christine-photo {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 .wp-block-list.has-custom-4-font-size {
-    line-height: 2;
+  line-height: 2;
 }
 
-/* -------------- Who I Support ----------------- */
+/* ----------------- Services ------------------  */
 
-.cherry-bloss-icon,
-.sprout-icon,
-.mental-health-icon {
-    width: 80px;
-    height: auto;
+.content-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  text-align: center;
 }
+
+.content-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* >>>>>> Images <<<<<< */
+
+.image-group figure.wp-block-image {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  margin: 0; 
+}
+
+.image-group figure.wp-block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+/* >>>>>> Learn More Button <<<<<< */
+
+.content-group .wp-block-button__link {
+  margin-top: 1rem;
+  border: 2px solid #6b4a2b;
+  background: transparent;
+  color: #6b4a2b;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.content-group .wp-block-button__link:hover {
+  border: 2px solid #6b4a2b;
+  background-color: #6b4a2b;
+  color: #f2e9dd;
+}
+
+/* Position the button group at the bottom */
+.content-group .wp-block-button {
+  margin-top: auto !important;
+}
+
+.wp-block-group .wp-block-button {
+  margin-bottom: 1rem !important;
+}
+
+/* >>>>>> Grid Layout <<<<<< */
+
+.wp-block-columns.services-columns {
+  --wp--style--layout--display: block !important;
+  display: grid !important;
+  align-items: stretch !important;
+}
+
+.wp-block-columns.services-columns > .wp-block-column {
+  height: 100%;
+}
+
+.wp-block-columns.services-columns {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 34.375em) {
+  .wp-block-columns.services-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 48.25em) {
+  .wp-block-columns.services-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
 
 /* --------------- What I Offer ----------------  */
 
-/* Change grid layout based on viewport width */
 .wp-block-group.offer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 37.5em) {
-    .wp-block-group.offer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .wp-block-group.offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* =================================================
 5. SERVICES
 ================================================= */
 
-.services-image-container {
-    outline: 3px solid red;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    position: relative;
+/* Reverse layout on desktop */
+@media (min-width: 48.875em) {
+  .wp-block-post-template > li.wp-block-post:nth-child(even) .wp-block-columns {
+    flex-direction: row-reverse;
+  }
 }
 
-.services-image img {
+/* Services Image */
+@media (max-width: 48.8125em) {
+
+  .services-image.wp-block-post-featured-image {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-image.wp-block-post-featured-image img {
     width: 100%;
-    height: 130%;
-    object-fit: cover;
-    will-change: transform;
-    transform: translateY(0);
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 /* =================================================
 6. ABOUT
 ================================================= */
 
+/* --------------- CTA Columns -----------------  */
+
+.wp-block-columns.about-columns {
+  display: grid !important;
+  gap: 1.5rem;
+}
+
+.wp-block-columns.about-columns {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 28.125em) {
+  .wp-block-columns.about-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48.25em) {
+  .wp-block-columns.about-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .privacy-policy-btn a:hover {
-    background: transparent !important;
-    color: #2c4a7a !important;
-    border: 2px solid #2c4a7a !important;
+  background: transparent !important;
+  color: #2c4a7a !important;
+  border: 2px solid #2c4a7a !important;
 }
 
 .meet-christine-image img:hover,
 .faq-rates-image img:hover,
 .policies-image img:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* =================================================
 7. MEET CHRISTINE
 ================================================= */
 
+/* --------------- Overlap Group -----------------  */
+
+/* allow overlap outside the column */
 .overlay-column {
-    position: relative;
-    overflow: visible;
-    /* allows overlap outside the column */
+  position: relative;
+  overflow: visible;
 }
 
 .text-group {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-    z-index: 5;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  z-index: 5;
+  transform: translateY(-40%); /* overlap image */
+}
 
-    /* overlap the image */
+@media (max-width: 48.8125em) {
+  .text-group {
+    width: 90%; 
+    max-width: 270px; /* 90% of 300px image */
+    margin-left: auto;
+    margin-right: auto;
     transform: translateY(-40%);
+  }
+}
+
+/* --------------- Profile Photo -----------------  */
+
+@media (max-width: 48.8125em) {
+  .overlay-column {
+    display: inline-block; 
+    width: auto; /* prevent full width */
+    text-align: center;
+  }
+
+  .image-wrapper {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 /* =================================================
@@ -352,8 +500,26 @@ h1.wp-block-site-title {
 ================================================= */
 
 .purple-daisy {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
+}
+
+/* ----------------- Accordion -----------------  */
+
+.wp-block-accordion-heading__toggle-icon {
+  font-size: 3rem;
+}
+
+.wp-block-accordion-item .wp-block-accordion-heading__toggle-title,
+.wp-block-accordion-item .wp-block-accordion-heading__toggle-title:hover,
+.wp-block-accordion-item .wp-block-accordion-heading__toggle-title:focus {
+  text-decoration: none !important;
+}
+
+/* Restore link behavior inside accordion content */
+.wp-block-accordion-item .wp-block-accordion-content a:hover,
+.wp-block-accordion-item .wp-block-accordion-content a:focus {
+  text-decoration: underline;
 }
 
 /* =================================================
@@ -362,128 +528,133 @@ h1.wp-block-site-title {
 
 /* ------------------ Header -------------------  */
 
-/* .post-type-archive-resources */
 .wp-block-group.template-header {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 51.25em) {
-    .wp-block-group.template-header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .wp-block-group.template-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ------------ Taxonomy Terms Grid ------------  */
 
 .wp-block-term {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.wp-block-term p {
-    padding: 0.5rem 0 !important;
-    margin: 0.5rem 0;
-}
-
-/* Hover state */
 .wp-block-term p:hover {
-    background-color: #2c4a7a !important;
-    border: 2px solid #2C4A7A !important;
-    color: #F2E9DD !important;
+  background-color: #2c4a7a !important;
+  border: 2px solid #2c4a7a !important;
+  color: #f2e9dd !important;
 }
 
 .wp-block-term p:hover a {
-    color: #F2E9DD !important;
+  color: #f2e9dd !important;
 }
 
-/* Remove underline on term links */
+.wp-block-term p a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .post-type-archive-resources p.wp-block-term-name a:hover {
-    text-decoration: none !important;
-    text-underline-offset: 0 !important;
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
 }
 
-/* Underline term links and pagination on hover */
 .taxonomy-resources_category.post-term.wp-block-post-terms:hover,
 .wp-block-query-pagination-previous:hover,
 .wp-block-query-pagination-next:hover {
-    text-decoration: underline !important;
-    text-underline-offset: 0.08rem !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.08rem !important;
 }
 
 ul.wp-block-term-template.is-layout-grid li.wp-block-term {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* >>>>>> Breakpoints <<<<<< */
 
 /* Mobile: 1 column */
 ul.wp-block-term-template.is-layout-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.wp-block-term p {
+  padding: 0.5rem 0.2rem !important;
+  margin: 0.5rem 0.2rem !important;
+  width: 190px;
 }
 
 /* Tablet: 2 columns */
 @media (min-width: 31.25em) {
-    ul.wp-block-term-template.is-layout-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  ul.wp-block-term-template.is-layout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wp-block-term p {
+    width: auto;
+  }
 }
 
 /* Desktop: 4 columns */
 @media (min-width: 53.125em) {
-    ul.wp-block-term-template.is-layout-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  ul.wp-block-term-template.is-layout-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ----------- Resources Posts Grid ------------  */
 
-/* Remove bold from paragraph text */
 .post-type-archive-resources .wp-block-group p,
 .tax-resources_category .wp-block-group p {
-    font-weight: 300;
+  font-weight: 300;
 }
 
-/* Box shadow */
 .post-type-archive-resources .wp-block-post,
 .tax-resources_category .wp-block-post {
-    box-shadow: 5px 5px 18px 5px rgba(44, 74, 122, 0.45);
-    border-radius: 5px;
+  box-shadow: 5px 5px 18px 5px rgba(44, 74, 122, 0.45);
+  border-radius: 5px;
 }
-
-/* >>>>>> Spacing <<<<<< */
 
 .resource-archive-grid-item,
 .resource-category-grid-item {
-    padding: 0.8rem;
+  padding: 0.8rem;
 }
 
 ul.wp-block-term-template.is-layout-grid {
-    gap: 0.2rem 1rem;
+  gap: 0.2rem 1rem;
 }
 
-/* Remove margins */
 .post-type-archive-resources .wp-block-hhc-blocks-link-wrapper h2,
 .tax-resources_category .wp-block-hhc-blocks-link-wrapper h2,
 .post-type-archive-resources .wp-block-hhc-blocks-link-wrapper p,
 .tax-resources_category .wp-block-hhc-blocks-link-wrapper p {
-    margin: 0 0.5rem !important;
+  margin: 0.2rem 0.5rem !important;
+}
+
+.wp-block-post-terms {
+  margin: 0.2rem 0.5rem !important;
 }
 
 /* >>>>>> Hover Effect <<<<<< */
 
-/* Increase size on hover */
 .post-type-archive-resources .wp-block-post,
 .tax-resources_category .wp-block-post {
-    transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .post-type-archive-resources .wp-block-post:hover,
 .tax-resources_category .wp-block-post:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 /* >>>>>> Breakpoints <<<<<< */
@@ -491,68 +662,42 @@ ul.wp-block-term-template.is-layout-grid {
 /* Mobile: 1 column */
 .post-type-archive-resources .wp-block-post-template,
 .tax-resources_category .wp-block-post-template {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 /* Tablet: 2 columns */
 @media (min-width: 37.5625em) {
-
-    .post-type-archive-resources .wp-block-post-template,
-    .tax-resources_category .wp-block-post-template {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .post-type-archive-resources .wp-block-post-template,
+  .tax-resources_category .wp-block-post-template {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Desktop: 3 columns */
 @media (min-width: 51.875em) {
-
-    .post-type-archive-resources .wp-block-post-template,
-    .tax-resources_category .wp-block-post-template {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .post-type-archive-resources .wp-block-post-template,
+  .tax-resources_category .wp-block-post-template {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Tablet & Desktop: Equal height cards */
 @media (min-width: 37.5625em) {
+  .post-type-archive-resources .wp-block-post,
+  .tax-resources_category .wp-block-post {
+    height: 100%;
+    display: flex;
+  }
 
-    .post-type-archive-resources .wp-block-post,
-    .tax-resources_category .wp-block-post {
-        height: 100%;
-        display: flex;
-    }
-
-    .post-type-archive-resources .wp-block-post-content,
-    .tax-resources_category .wp-block-post-content {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
+  .post-type-archive-resources .wp-block-post-content,
+  .tax-resources_category .wp-block-post-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 }
-
-/* ------------- Buttons & Links ---------------  */
-
-/* Make buttons the same width */
-/* .single-resources .wp-block-button__link:not(.filter-button a),
-.post-type-archive-resources .wp-block-button__link:not(.filter-button a) {
-    width: 300px;
-    display: inline-block;
-    text-align: center;
-} */
-
-/* Buttons hover */
-/* .post-type-archive-resources .wp-block-button__link:hover {
-    background-color: #664024 !important;
-    border-color: #664024 !important;
-    color: #F2E9DD !important;
-} */
-
-/* .post-type-archive-resources p a:hover {
-    text-decoration: underline !important;
-    text-underline-offset: 0.08rem !important;
-} */
-
 
 /* =================================================
 10. CONTACT
@@ -561,36 +706,66 @@ ul.wp-block-term-template.is-layout-grid {
 /* --------------- Contact Form ----------------  */
 
 .srfm-form-container {
-    padding: 0;
+  padding: 0;
 }
+
+/* >>>>>> Field Border <<<<<< */
+
+.srfm-input-common,
+.srfm-dropdown-common .ts-control {
+  border: 1px solid #14243e !important;
+}
+
+/* >>>>>> Dropdown Styles <<<<<< */
 
 .ts-dropdown.single.plugin-remove_button.plugin-clear_button {
-    background-color: #7bbdbb !important;
+  background-color: #7bbdbb !important;
 }
 
-.ts-dropdown-content .option:hover {
-    background-color: #664024 !important;
-    color: #F2E9DD !important;
-}
-
+.ts-dropdown-content .option:hover,
 .ts-dropdown-content .option.active {
-    background-color: #664024 !important;
-    color: #F2E9DD !important;
+  background-color: #664024 !important;
+  color: #f2e9dd !important;
 }
 
-.srfm-input-common:focus,
-.srfm-dropdown-common .ts-control:focus {
+.ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:hover{
     border-color: #664024 !important;
-    box-shadow: 0 0 0 1px #664024 !important;
+}
+
+.srfm-form-container
+  .srfm-form
+  .srfm-block
+  .srfm-dropdown-common-wrap
+  .ts-control {
+  box-shadow: none !important;
+}
+
+/* >>>>>> Hover States <<<<<< */
+
+.srfm-input-common:hover,
+.srfm-dropdown-common .ts-control:hover,
+.iti__selected-country:hover,
+.ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:hover {
+    border: 2px solid #664024 !important;
+}
+
+.srfm-input-common:focus-visible,
+.srfm-dropdown-common .ts-control:focus-visible,
+.iti__selected-country:focus-visible,
+label .srfm-span-wrap:focus-visible,
+.ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:focus-visible,
+#srfm-submit-btn:focus-visible {
+  border-color: #664024 !important;
+  box-shadow: 0 2px 0 2px #664024 !important;
 }
 
 #srfm-submit-btn {
-    background-color: #2c4a7a !important;
-    border: 2px solid #2c4a7a !important;
+  background-color: #2c4a7a !important;
+  border: 2px solid #2c4a7a !important;
 }
 
 #srfm-submit-btn:hover {
-    background: transparent !important;
-    color: #2c4a7a !important;
-    border: 2px solid #2c4a7a !important;
+  background: transparent !important;
+  color: #2c4a7a !important;
+  border: 2px solid #2c4a7a !important;
 }

@@ -115,61 +115,42 @@ function helpinghands_register_custom_post_types() {
         'menu_icon'          => 'dashicons-book', 
         'supports'           => array('title', 'editor'),
         'template_lock'      => 'all', // lock the template 
+
         'template' => array(
             array(
                 'hhc-blocks/link-wrapper',
                 array(
-                    'url'  => '',
-                    'lock' => array(
-                        'move'   => true,
-                        'remove' => true,
-                    ),
+                    'url' => '',
                 ),
-                array( 
+                array(
                     array(
                         'core/group',
                         array(
-                            'align'        => 'full',
-                            'lock'         => array(
-                                'move'   => true,
-                                'remove' => true,
-                            ),
+                            'className' => 'resource-card-inner',
                         ),
-                        array( 
+                        array(
                             array(
                                 'core/heading',
                                 array(
                                     'level'       => 2,
                                     'placeholder' => 'Enter resource name here...',
-                                    'lock'        => array(
-                                        'move'   => true,
-                                        'remove' => true,
-                                    ),
                                 )
                             ),
                             array(
                                 'core/paragraph',
                                 array(
                                     'placeholder' => 'Describe the resource...',
-                                    'lock'        => array(
-                                        'move'   => true,
-                                        'remove' => true,
-                                    ),
                                 )
-                            ),
-                            array(
-                                'core/post-terms',
-                                array(
-                                    'className' => 'post-term',
-                                    'term'      => 'resource_category',
-                                    'lock'      => array(
-                                        'move'   => true,
-                                        'remove' => true,
-                                    ),
-                                )
-                            ),
+                            )
                         )
                     )
+                )
+            ),
+            array(
+                'core/post-terms',
+                array(
+                    'className' => 'post-term',
+                    'term'      => 'resource_category',
                 )
             )
         ),

@@ -4,7 +4,7 @@ export default function save( { attributes } ) {
     const { url } = attributes;
 
     const blockProps = useBlockProps.save({
-        className: 'hhc-clickable-group',
+        className: 'hhc-link-wrapper',
     });
 
     return (

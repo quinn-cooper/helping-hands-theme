@@ -1,36 +1,6 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'aos-block' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'hhc-blocks/aos-block',
-		'version' => '0.1.0',
-		'title' => 'AOS Block',
-		'category' => 'widgets',
-		'icon' => 'move',
-		'description' => 'An AOS block for the Helping Hands Counselling website.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'attributes' => array(
-			'animation' => array(
-				'type' => 'string',
-				'default' => 'fade-up'
-			),
-			'duration' => array(
-				'type' => 'number',
-				'default' => 1000
-			)
-		),
-		'textdomain' => 'aos-block',
-		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css'
-	),
 	'business-info-address' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -121,53 +91,33 @@ return array(
 		'render' => 'file:./render.php'
 	),
 	'link-wrapper' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'hhc-blocks/link-wrapper',
-		'version' => '0.1.0',
 		'title' => 'Link Wrapper',
-		'category' => 'widgets',
+		'category' => 'design',
 		'icon' => 'admin-links',
-		'description' => 'A link wrapper custom block.',
+		'description' => 'Makes an entire block group clickable.',
 		'attributes' => array(
 			'url' => array(
 				'type' => 'string',
 				'default' => ''
 			)
 		),
-		'example' => array(
-			
-		),
 		'supports' => array(
 			'html' => false,
-			'anchor' => true
+			'anchor' => false,
+			'reusable' => false,
+			'multiple' => true
 		),
-		'textdomain' => 'link-wrapper',
+		'allowedBlocks' => array(
+			'core/group',
+			'core/heading',
+			'core/paragraph'
+		),
+		'templateLock' => 'all',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
-	),
-	'services-slider' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'hhc-blocks/services-slider',
-		'version' => '0.1.0',
-		'title' => 'Services CTA Slider',
-		'category' => 'widgets',
-		'icon' => 'portfolio',
-		'description' => 'A slider for service offerings.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'services-slider',
-		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'editorStyle' => 'file:./editor.css',
+		'style' => 'file:./style.css'
 	),
 	'testimonials-slider' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

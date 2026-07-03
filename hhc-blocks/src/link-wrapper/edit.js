@@ -7,7 +7,7 @@ export default function Edit( { attributes, setAttributes } ) {
     const { url } = attributes;
 
     const blockProps = useBlockProps({
-        className: 'hhc-clickable-group',
+        className: 'hhc-link-wrapper',
     });
 
     return (

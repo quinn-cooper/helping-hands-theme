@@ -1,5 +1,4 @@
 <?php
-
 // -------------------------------
 // Enqueue Styles & Scripts
 // -------------------------------
@@ -28,63 +27,17 @@ function helping_hands_enqueue_styles() {
         array(),
         '12.1.1'
     );
-
-    // 4. AOS CSS
-    wp_enqueue_style('aos-css', 
-        'https://unpkg.com/aos@2.3.1/dist/aos.css', 
-        array(), //  dependencies
-        '2.3.4', //  version
-    );
-
 }
 add_action('wp_enqueue_scripts', 'helping_hands_enqueue_styles');
 
 function helping_hands_enqueue_scripts() {
 
-    // 1. AOS JS
-    wp_enqueue_script('aos-js', 
-        'https://unpkg.com/aos@2.3.1/dist/aos.js', 
-        array(), //  dependencies
-        '2.3.4', //  version
-        true //  in footer
-    );
-
-    // 2. Main JS
-    wp_enqueue_script(
-        'helping-hands-script',
-        get_theme_file_uri('js/main.js'),
-        array(),
-        wp_get_theme()->get('Version'),
-        true
-    );
-
-    // 3. Initialize JS
-    // Set to false while testing; set to true once it's working  
-    // offset forces animation
-    wp_add_inline_script(
-        'aos-js', 
-        'AOS.init({
-            duration: 1000,
-            once: false,
-            offset: 100 
-        });'  
-    );
-
-    // 4. Dynamic pop-up window for cookies
+    // 1. Dynamic pop-up window for cookies
     wp_enqueue_script(
         'custom-modal-script',
         get_template_directory_uri() . '/js/custom-modal.js',
         array(),
         '1.0.0',
-        true
-    );
-
-    // 5. Services Slider JS
-    wp_enqueue_script(
-        'services-slider-js',
-        get_theme_file_uri('js/services-slider.js'),
-        array(),
-        wp_get_theme()->get('Version'),
         true
     );
 }
@@ -138,6 +91,25 @@ function helpinghands_custom_image_sizes($sizes) {
 add_filter('image_size_names_choose', 'helpinghands_custom_image_sizes');
 
 // -------------------------------
+// CPTs & Blocks
+// -------------------------------
+
+// Register CPT
+require get_theme_file_path() . '/inc/cpt-and-taxonomies.php';
+
+// Register Blocks
+require get_theme_file_path() . '/hhc-blocks/hhc-blocks.php';
+
+// -------------------------------
+// Accessibility
+// -------------------------------
+
+// Add skip link for screen readers and keyboard users
+add_action( 'wp_body_open', function() {
+    echo '<a class="skip-link" href="#main-content">Skip to content</a>';
+});
+
+// -------------------------------
 // Cookies
 // -------------------------------
 
@@ -158,18 +130,11 @@ function hhc_cookie_modal_html() {
 add_action('wp_footer', 'hhc_cookie_modal_html');
 
 // -------------------------------
-// CPTs & Blocks
-// -------------------------------
-
-// Register CPT
-require get_theme_file_path() . '/inc/cpt-and-taxonomies.php';
-
-// Register Blocks
-require get_theme_file_path() . '/hhc-blocks/hhc-blocks.php';
-
-// -------------------------------
 // Dashboard Customizations
 // -------------------------------
+
+// Custom welcome panel 
+
 
 // Remove Posts menu from admin
 function remove_posts_sidebar() {
@@ -184,7 +149,6 @@ function remove_posts_top_menu() {
 add_action('admin_bar_menu', 'remove_posts_top_menu', 999);
 
 // Remove Comments menu from admin
-
 function remove_comments_sidebar() {
     remove_menu_page('edit-comments.php'); // Remove Comments from admin sidebar
 }

@@ -1,26 +1,29 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "hhc-blocks/link-wrapper",
-  "version": "0.1.0",
   "title": "Link Wrapper",
-  "category": "widgets",
+  "category": "design",
   "icon": "admin-links",
-  "description": "A link wrapper custom block.",
+  "description": "Makes an entire block group clickable.",
   "attributes": {
     "url": {
       "type": "string",
       "default": ""
     }
   },
-  "example": {},
   "supports": {
     "html": false,
-    "anchor": true
+    "anchor": false,
+    "reusable": false,
+    "multiple": true
   },
-  "textdomain": "link-wrapper",
+  "allowedBlocks": [
+    "core/group",
+    "core/heading",
+    "core/paragraph"
+  ],
+  "templateLock": "all",
   "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
 }

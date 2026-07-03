@@ -300,7 +300,7 @@
 			"presets": [
 				{
 					"name": "High Blur Shadow",
-					"shadow": "12px 12px 45px 0 #14243e",
+					"shadow": "4px 4px 55px 0 #14243e",
 					"slug": "shadow-1"
 				},
 				{

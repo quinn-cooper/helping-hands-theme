@@ -67,18 +67,7 @@ Update URI: false
 /* ----------------- Skip Link -----------------  */
 
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 8px 16px;
-  background: #fff;
-  color: #2c4a7a;
-  z-index: 9999;
-}
-
-.skip-link:focus,
-.skip-link:focus-visible {
-  top: 0;
+  display: none !important;
 }
 
 p a:active {
@@ -90,7 +79,6 @@ a:focus-visible {
   outline: 2px dashed #2c4a7a !important;
   outline-offset: 2px;
 }
-
 
 /* ---------------- Link Styles ----------------  */
 
@@ -297,7 +285,7 @@ h1.wp-block-site-title {
   aspect-ratio: 4 / 3;
   width: 100%;
   overflow: hidden;
-  margin: 0; 
+  margin: 0;
 }
 
 .image-group figure.wp-block-image img {
@@ -340,6 +328,7 @@ h1.wp-block-site-title {
   --wp--style--layout--display: block !important;
   display: grid !important;
   align-items: stretch !important;
+  gap: 2rem;
 }
 
 .wp-block-columns.services-columns > .wp-block-column {
@@ -388,7 +377,6 @@ h1.wp-block-site-title {
 
 /* Services Image */
 @media (max-width: 48.8125em) {
-
   .services-image.wp-block-post-featured-image {
     max-width: 300px;
     margin-left: auto;
@@ -465,7 +453,7 @@ h1.wp-block-site-title {
 
 @media (max-width: 48.8125em) {
   .text-group {
-    width: 90%; 
+    width: 90%;
     max-width: 270px; /* 90% of 300px image */
     margin-left: auto;
     margin-right: auto;
@@ -477,7 +465,7 @@ h1.wp-block-site-title {
 
 @media (max-width: 48.8125em) {
   .overlay-column {
-    display: inline-block; 
+    display: inline-block;
     width: auto; /* prevent full width */
     text-align: center;
   }
@@ -728,8 +716,8 @@ ul.wp-block-term-template.is-layout-grid {
   color: #f2e9dd !important;
 }
 
-.ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:hover{
-    border-color: #664024 !important;
+.ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:hover {
+  border-color: #664024 !important;
 }
 
 .srfm-form-container
@@ -746,7 +734,7 @@ ul.wp-block-term-template.is-layout-grid {
 .srfm-dropdown-common .ts-control:hover,
 .iti__selected-country:hover,
 .ts-wrapper.srfm-dropdown-common.srfm-dropdown-input .ts-control:hover {
-    border: 2px solid #664024 !important;
+  border: 2px solid #664024 !important;
 }
 
 .srfm-input-common:focus-visible,

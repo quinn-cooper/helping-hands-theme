@@ -79,6 +79,14 @@ header {
 }
 
 @media (max-width: 38.75em) {
+  .wp-block-navigation__responsive-container.is-menu-open 
+    .wp-block-navigation__responsive-container-content a {
+      font-size: 1.9rem !important;
+      line-height: 1.4;
+    }
+}
+
+@media (max-width: 38.75em) {
   /* Hide About submenu by default */
   nav.header-nav-links
     .wp-block-navigation-item.about-link.wp-block-navigation-submenu

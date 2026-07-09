@@ -6,7 +6,7 @@ Author URI: http://www.quinnfuldesigns.com
 Description: Theme for Helping Hands Counselling.
 Requires at least: 6.9
 Tested up to: 6.9
-Requires PHP: 5.7
+Requires PHP: 7.4
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,7 @@ Update URI: false
 7. Meet Christine
         - Overlap Group
         - Profile Photo
+        - Button Styles
 8. FAQ & Rates
         - Accordion
 9. Resources
@@ -57,6 +58,7 @@ Update URI: false
             - Field Border
             - Dropdown Styles
             - Hover States
+11. 404 Template
 ----------------------------------------------------
 ------------------------------------------------- */
 
@@ -66,8 +68,14 @@ Update URI: false
 
 /* ----------------- Skip Link -----------------  */
 
-.skip-link {
+/* .skip-link {
   display: none !important;
+} */
+
+/* ---------------- Link Styles ----------------  */
+
+p a:hover {
+  text-decoration: underline !important;
 }
 
 p a:active {
@@ -78,29 +86,6 @@ p a:active {
 a:focus-visible {
   outline: 2px dashed #2c4a7a !important;
   outline-offset: 2px;
-}
-
-/* ---------------- Link Styles ----------------  */
-
-p a:hover {
-  text-decoration: underline !important;
-}
-
-/* --------------- Button Styles ---------------  */
-
-/* Meet Christine */
-.contact-cta a:hover {
-  background: transparent !important;
-  color: #eab394 !important;
-  border: 2px solid #eab394 !important;
-}
-
-/* 404 Template */
-.is-style-outline.return-home a:hover,
-.is-style-outline.view-services2 a:hover,
-.is-style-outline.contact-me2 a:hover {
-  background-color: #2c4a7a !important;
-  color: #f2e9dd !important;
 }
 
 /* =================================================
@@ -358,7 +343,7 @@ h1.wp-block-site-title {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 45.625em) {
   .wp-block-group.offer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -376,11 +361,12 @@ h1.wp-block-site-title {
 }
 
 /* Services Image */
-@media (max-width: 48.8125em) {
+@media (max-width: 48.8125rem) {
   .services-image.wp-block-post-featured-image {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
   }
 
   .services-image.wp-block-post-featured-image img {
@@ -389,6 +375,15 @@ h1.wp-block-site-title {
     object-fit: contain;
   }
 }
+
+/* Fix mobile side spacing for Services columns */
+@media (max-width: 56.25em) {
+  .wp-block-columns.focus-approach-columns {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
 
 /* =================================================
 6. ABOUT
@@ -481,6 +476,14 @@ h1.wp-block-site-title {
     height: auto;
     object-fit: contain;
   }
+}
+
+/* --------------- Button Styles -----------------  */
+
+.contact-cta a:hover {
+  background: transparent !important;
+  color: #eab394 !important;
+  border: 2px solid #eab394 !important;
 }
 
 /* =================================================
@@ -578,7 +581,7 @@ ul.wp-block-term-template.is-layout-grid {
 
 .wp-block-term p {
   padding: 0.5rem 0.2rem !important;
-  margin: 0.5rem 0.2rem !important;
+  margin: 0.5rem 0 !important;
   width: 190px;
 }
 
@@ -756,4 +759,27 @@ label .srfm-span-wrap:focus-visible,
   background: transparent !important;
   color: #2c4a7a !important;
   border: 2px solid #2c4a7a !important;
+}
+
+/* =================================================
+11. 404 TEMPLATE
+================================================= */
+
+.is-style-outline.return-home a:hover,
+.is-style-outline.view-services2 a:hover,
+.is-style-outline.contact-me2 a:hover {
+  background-color: #2c4a7a !important;
+  color: #f2e9dd !important;
+}
+
+.page-not-found-columns {
+    display: grid !important;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; 
+}
+
+@media (min-width: 33.125em) {
+  .wp-block-columns.page-not-found-columns {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }

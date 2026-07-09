@@ -70,7 +70,7 @@ header {
 }
 
 /* Change font size on smaller screens */
-@media (min-width: 38.8125em) and (max-width: 48.1875em) {
+@media (min-width: 38.8125em) and (max-width: 42.5em) {
   header nav.wp-block-navigation .wp-block-navigation__container a {
     white-space: nowrap;
     padding: 0.25rem 0.5rem;

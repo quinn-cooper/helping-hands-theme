@@ -13,11 +13,8 @@
 <?php
 $phone = get_field('phone_number', 'option');
 ?>
-
 <div <?php echo get_block_wrapper_attributes(); ?>>
-
 	<?php if ($phone) : ?>
 	<p><?php echo esc_html($phone); ?></p>
 	<?php endif; ?>
-
 </div>

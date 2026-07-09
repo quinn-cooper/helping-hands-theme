@@ -36,7 +36,6 @@ function hhc_testimonials_slider_render_callback( $args, $block_type ) {
 }
     return $args;
 }
-
 add_filter( 'register_block_type_args', 'hhc_testimonials_slider_render_callback', 10, 2 );
 
 // <!-- Add variable that store string containing css custom prop (from edit.js) & arrowColor att as value -->
@@ -46,7 +45,6 @@ function hhc_render_testimonials_slider( $attributes ) {
 		'navigation' => $attributes['navigation'],
 		'pagination' => $attributes['pagination'],
 	);
-    
     $styles = "--arrow-color: " . $attributes[ "arrowColor" ];
     ?>
     <div <?php echo get_block_wrapper_attributes( array( "style" => $styles ) );
@@ -83,7 +81,6 @@ function hhc_render_testimonials_slider( $attributes ) {
         endif;
         ?>
     </div>
-
     <?php
     return ob_get_clean();
 }
@@ -125,6 +122,4 @@ function hhc_resources_archive_posts_per_page( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'hhc_resources_archive_posts_per_page' );
-
-?>
 

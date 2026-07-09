@@ -1,9 +1,7 @@
 <?php
-
 // -------------------------------
 // Custom Post Types
 // -------------------------------
-
 function helpinghands_register_custom_post_types() {
 
     // 1. Service Offerings CPT
@@ -257,7 +255,6 @@ function helpinghands_register_taxonomies() {
         'rewrite'           => false,
 
     );
-
     register_taxonomy( 'resources_category', array( 'resources' ), $args );
 }
 add_action( 'init', 'helpinghands_register_taxonomies' );

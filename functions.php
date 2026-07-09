@@ -31,7 +31,6 @@ function helping_hands_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'helping_hands_enqueue_styles');
 
 function helping_hands_enqueue_scripts() {
-
     // 1. Dynamic pop-up window for cookies
     wp_enqueue_script(
         'custom-modal-script',
@@ -48,7 +47,6 @@ add_action('wp_enqueue_scripts', 'helping_hands_enqueue_scripts');
 // -------------------------------
 
 function helpinghands_image_sizes() {
-    
     // Load style.css on backend 
     add_editor_style(get_stylesheet_uri( ));
 
@@ -132,30 +130,3 @@ add_action('wp_footer', 'hhc_cookie_modal_html');
 // -------------------------------
 // Dashboard Customizations
 // -------------------------------
-
-// Custom welcome panel 
-
-
-// Remove Posts menu from admin
-function remove_posts_sidebar() {
-    remove_menu_page('edit.php'); // Posts
-}
-add_action('admin_menu', 'remove_posts_sidebar');
-
-function remove_posts_top_menu() {
-    global $wp_admin_bar;
-    $wp_admin_bar->remove_node('new-post'); // Remove Posts from top admin menu
-}
-add_action('admin_bar_menu', 'remove_posts_top_menu', 999);
-
-// Remove Comments menu from admin
-function remove_comments_sidebar() {
-    remove_menu_page('edit-comments.php'); // Remove Comments from admin sidebar
-}
-add_action('admin_menu', 'remove_comments_sidebar');
-
-function remove_comments_top_menu() {
-    global $wp_admin_bar;
-    $wp_admin_bar->remove_node('comments'); // Remove Comments from top admin menu
-}
-add_action('admin_bar_menu', 'remove_comments_top_menu', 999);

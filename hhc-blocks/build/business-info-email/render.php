@@ -10,15 +10,11 @@
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
 ?>
-
 <?php
 $email = get_field('email', 'option');
 ?>
-
 <div <?php echo get_block_wrapper_attributes(); ?>>
-
 	<?php if ($email) : ?>
 	<p><a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a></p>
 	<?php endif; ?>
-
 </div>
